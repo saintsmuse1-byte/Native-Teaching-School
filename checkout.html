@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment & Booking | Czeca English</title>
+    <link rel="stylesheet" href="./style.css?v=2.1">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        .checkout-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            max-width: 1100px;
+            margin: 60px auto;
+            padding: 20px;
+        }
+        .payment-box, .booking-box {
+            background: #fff;
+            padding: 40px;
+            border-radius: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+        .blik-logo {
+            width: 80px;
+            margin-bottom: 20px;
+        }
+        .calendar-placeholder {
+            background: var(--bg-gray);
+            border: 2px dashed var(--light-teal);
+            border-radius: 15px;
+            height: 450px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #777;
+        }
+        .step-number {
+            background: var(--teal);
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+        @media (max-width: 850px) {
+            .checkout-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body class="bg-gray">
+
+    <header style="padding: 20px 10%; background: #fff;">
+        <a href="index.html" style="text-decoration: none; color: var(--teal); font-weight: bold;">← Back to Pricing</a>
+    </header>
+
+    <div class="checkout-grid">
+        
+        <div class="payment-box">
+            <div class="step-number">1</div>
+            <h3>Finalize Payment</h3>
+            <p style="margin-bottom: 30px; color: #666;">Secure checkout via BLIK or Card</p>
+            
+            <div style="padding: 20px; border: 1px solid #eee; border-radius: 15px; margin-bottom: 20px;">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/BLIK_logo.svg" alt="BLIK" class="blik-logo">
+                <input type="text" placeholder="Enter 6-digit BLIK code" style="width: 100%; padding: 12px; text-align: center; font-size: 1.2rem; letter-spacing: 5px; border-radius: 8px; border: 1px solid #ddd;">
+            </div>
+
+            <button class="btn btn-teal" style="width: 100%;">Pay Now</button>
+            <p style="font-size: 0.8rem; color: #999; margin-top: 15px;">Secure transaction by Czeca English Payment Gateway</p>
+        </div>
+
+        <div class="booking-box">
+            <div class="step-number">2</div>
+            <h3>Schedule Your Session</h3>
+            <p style="margin-bottom: 30px; color: #666;">Choose your time on the <strong>Active Now</strong> calendar</p>
+            
+            <div class="calendar-placeholder">
+                <div>
+                    <p><strong>Active Now Calendar</strong></p>
+                    <p style="font-size: 0.9rem;">(Calendar widget will be embedded here)</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer class="footer-bottom">
+        <p>&copy; 2026 Czeca English | Managed from Cape Town & Tbilisi</p>
+    </footer>
+
+</body>
+</html>
