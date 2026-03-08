@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Umów sesję | Czeca English</title>
-    <link rel="stylesheet" href="./style.css?v=1.8">
+    <link rel="stylesheet" href="./style.css?v=1.9">
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body class="booking-page">
 
-    <header class="booking-header">
+    <header class="booking-header" style="padding: 20px 10%; background: #fff;">
         <a href="index.html" class="back-link">← Wróć do Strony Głównej</a>
     </header>
 
@@ -34,25 +34,28 @@
                     <div class="input-group">
                         <label>Wybrany pakiet</label>
                         <select>
-                            <option>Select a package...</option>
-                            <option>Indywidualny Express</option>
-                            <option>Indywidualny Standard</option>
+                            <option>Wybierz pakiet...</option>
+                            <option>Ekspresowe (30 min)</option>
+                            <option>Standardowe (45 min)</option>
                         </select>
                     </div>
                     <div class="input-group">
-                        <label>Preferowana strefa czasowa</label>
-                        <input type="text" placeholder="Europe/Warsaw (GMT+1)">
+                        <label>Preferowana metoda płatności</label>
+                        <select>
+                            <option value="blik">BLIK</option>
+                            <option value="card">Karta płatnicza</option>
+                            <option value="transfer">Przelew bankowy</option>
+                        </select>
                     </div>
                 </div>
 
                 <div class="input-group full-width">
                     <label>Jakie są Twoje główne cele komunikacyjne?</label>
-                    <textarea placeholder="Opisz krótko, co chcesz osiągnąć..."></textarea>
+                    <textarea placeholder="Opisz krótko, co chcesz osiągnąć..." rows="4"></textarea>
                 </div>
 
                 <button type="submit" class="btn btn-dark-form">Potwierdź Zgłoszenie</button>
             </form>
-            <p class="form-fine-print">Klikając "Wyślij", akceptujesz naszą Politykę prywatności oraz Regulamin.</p>
         </div>
     </section>
 
@@ -67,16 +70,14 @@
                 <span class="profile-title">EXECUTIVE LANGUAGE COACH</span>
                 <p class="profile-edu"><strong>Wykształcenie i Specjalizacja:</strong><br>
                 Licencjat z filologii angielskiej oraz psychologii. Specjalizacja: angielski konwersacyjny i biznesowy.</p>
-                <a href="#" class="profile-link-v2">Zobacz Pełny Profil →</a>
+                
+                <a href="profile.html" class="profile-link-v2">Zobacz Pełny Profil →</a>
             </div>
         </div>
     </section>
 
-    <section class="contact-footer-simple">
+    <footer class="contact-footer-simple">
         <div class="contact-box-v2">
-            <h3>Gotowy na wejście na wyższy poziom?</h3>
-            <p>Skontaktuj się z nami bezpośrednio, aby omówić szczegóły Twojej nauki.</p>
-            
             <div class="contact-details-v2">
                 <div class="contact-item-v2">
                     <span>📧</span>
@@ -84,12 +85,12 @@
                 </div>
                 <div class="contact-item-v2">
                     <span>📞</span>
-                    <p>+48 000 000 000</p> </div>
+                    <p>+48 000 000 000</p>
+                </div>
             </div>
-
-            <a href="#" class="btn btn-teal-v2">Book Your Session</a>
+            <a href="#" class="btn btn-teal">Zarezerwuj teraz</a>
         </div>
-    </section>
+    </footer>
 
 </body>
 </html>
