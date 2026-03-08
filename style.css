@@ -110,3 +110,85 @@ p { font-size: 1.1rem; margin-bottom: 30px; opacity: 0.9; }
 
 .arch-content h2 { font-size: 2.5rem; color: #ff9f43; margin: 10px 0; }
 .arch-content .subtitle { letter-spacing: 2px; color: #555; }
+<section class="features">
+        <h2 class="section-title">Dynamiczna nauka. <span>Realne efekty.</span></h2>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <div class="icon">📅</div>
+                <h3>Elastyczne godziny spotkań</h3>
+                <p>Działamy na Twoich zasadach. Ty wybierasz czas, my dopasowujemy resztę.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">📄</div>
+                <h3>Brak umowy</h3>
+                <p>Rozumiemy, że nauka powinna dawać satysfakcję. Uczysz się bez zbędnych zobowiązań.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">📹</div>
+                <h3>Bezpłatna lekcja próbna</h3>
+                <p>Poznaj nasze metody podczas 20-minutowej lekcji wprowadzającej.</p>
+            </div>
+            <div class="feature-card highlight-card">
+                <div class="icon">✔️</div>
+                <h3>Zarezerwuj termin już dziś!</h3>
+                <a href="#" class="btn btn-dark">Bezpłatna lekcja próbna →</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="pricing">
+        <div class="pricing-header">
+            <h2>Inwestycja w Twoją przyszłość</h2>
+            <p>Angielski bez zobowiązań. Cennik poniżej.</p>
+        </div>
+        
+        <div class="step-indicator">
+            <div class="step active">1 <span>Wybierz plan</span></div>
+            <div class="step">2 <span>Dopasuj lekcje</span></div>
+            <div class="step">3 <span>Podsumowanie</span></div>
+        </div>
+
+        <div class="pricing-container">
+            <h3>Krok 1: Wybierz plan indywidualny</h3>
+            <div class="plan-grid">
+                <div class="plan-card">
+                    <div class="icon">🕒</div>
+                    <h4>Zajęcia Ekspresowe</h4>
+                    <p>Intensywne, 25-minutowe lekcje nastawione na szybkie postępy.</p>
+                </div>
+                <div class="plan-card">
+                    <div class="icon">👤</div>
+                    <h4>Zajęcia Standardowe</h4>
+                    <p>45-minutowe spotkania, które dają czas na spokojne rozwijanie umiejętności.</p>
+                </div>
+            </div>
+            <button class="btn btn-dark">Przejdź do kroku 2</button>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <h3>Czeca English</h3>
+                <p>Czuj się jak u siebie, gdziekolwiek jesteś. Opanuj język globalnej kultury.</p>
+                <div class="social-icons">
+                    <a href="#">IG</a> <a href="#">LI</a> <a href="#">FB</a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Szybkie Linki</h4>
+                <ul>
+                    <li><a href="#">Strona Główna</a></li>
+                    <li><a href="#">Nasi Eksperci</a></li>
+                    <li><a href="#">Zarezerwuj Sesję</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Get in Touch</h4>
+                <p>📧 hello@czecaenglish.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Czeca English Academy. All rights reserved.</p>
+        </div>
+    </footer>
