@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Czeca English | Mów naturalnie</title>
-    <link rel="stylesheet" href="./style.css?v=1.5">
+    <link rel="stylesheet" href="./style.css?v=1.6">
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -15,10 +15,10 @@
         <div class="hero-content">
             <span class="badge">SWOBODNY ANGIELSKI W MIĘDZYNARODOWEJ KOMUNIKACJI</span>
             <h1>Mów naturalnie po angielsku, w każdym zakątku świata.</h1>
-            <p>Lekcje angielskiego online z native speakerami, zaprojektowane z myślą o naturalnej płynności i realnej pewności w komunikacji.</p>
+            <p>Lekcje online zaprojektowane z myślą o naturalnej płynności i realnej pewności w komunikacji.</p>
             <div class="cta-group">
-                <a href="#pricing" class="btn btn-teal">ODBIERZ BEZPŁATNĄ LEKCJĘ</a>
-                <a href="#pricing" class="btn btn-outline">Poznaj Cennik →</a>
+                <a href="#calculator" class="btn btn-teal">ODBIERZ BEZPŁATNĄ LEKCJĘ</a>
+                <a href="#calculator" class="btn btn-outline">Poznaj Cennik →</a>
             </div>
         </div>
     </header>
@@ -51,7 +51,7 @@
                 <span class="subtitle">TWÓJ CEL?</span>
                 <h2>Pewność siebie</h2>
                 <p>Zacznij przełamywać barierę językową z naszymi metodami. Umów się na bezpłatną lekcję próbną już dziś!</p>
-                <a href="#pricing" class="btn btn-teal">ODBIERZ BEZPŁATNĄ LEKCJĘ</a>
+                <a href="#calculator" class="btn btn-teal">ODBIERZ BEZPŁATNĄ LEKCJĘ</a>
             </div>
         </div>
     </section>
@@ -62,22 +62,56 @@
             <div class="feature-card">
                 <div class="icon">📅</div>
                 <h3>Elastyczne godziny</h3>
-                <p>Działamy na Twoich zasadach. Ty wybierasz czas, my zajmiemy się resztą.</p>
+                <p>Działamy na Twoich zasadach. Ty wybierasz czas, my zajmiemy się resztę.</p>
             </div>
             <div class="feature-card">
                 <div class="icon">📄</div>
                 <h3>Brak umowy</h3>
                 <p>Uczysz się bez zbędnych zobowiązań i długoterminowych kontraktów.</p>
             </div>
-            <div class="feature-card">
+            <div class="feature-card highlight-card">
                 <div class="icon">📹</div>
                 <h3>Lekcja próbna</h3>
                 <p>Poznaj nas podczas 20-minutowej lekcji wprowadzającej zupełnie za darmo.</p>
+                <a href="#calculator" class="btn btn-white">Zapisz się →</a>
             </div>
-            <div class="feature-card highlight-card">
-                <div class="icon">✔️</div>
-                <h3>Zacznij teraz</h3>
-                <a href="#" class="btn btn-white">Zapisz się →</a>
+        </div>
+    </section>
+
+    <section id="calculator" class="calc-section">
+        <div class="calc-container">
+            <h2>Inwestycja w Twoją przyszłość</h2>
+            <p class="calc-subtitle">Wybierz plan i zobacz miesięczny koszt</p>
+            
+            <div class="calc-grid">
+                <div class="calc-inputs">
+                    <label>1. Wybierz rodzaj lekcji:</label>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="plan" value="55" checked onchange="calculate()">
+                            <span>Ekspresowe (30 min) <strong>55 PLN</strong></span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="plan" value="80" onchange="calculate()">
+                            <span>Standardowe (45 min) <strong>80 PLN</strong></span>
+                        </label>
+                    </div>
+
+                    <label>2. Liczba lekcji w tygodniu:</label>
+                    <input type="range" id="frequency" min="1" max="5" value="1" oninput="calculate()">
+                    <div class="range-labels">
+                        <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span>
+                    </div>
+                </div>
+
+                <div class="calc-result">
+                    <div class="result-box">
+                        <p>Szacowany koszt miesięczny:</p>
+                        <h3 id="total-price">220 PLN</h3>
+                        <span id="lesson-count">4 lekcje w miesiącu</span>
+                        <a href="#" class="btn btn-teal">ODBIERZ BEZPŁATNĄ LEKCJĘ</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -99,5 +133,16 @@
         </div>
     </footer>
 
+    <script>
+        function calculate() {
+            const pricePerLesson = document.querySelector('input[name="plan"]:checked').value;
+            const frequency = document.getElementById('frequency').value;
+            const monthlyLessons = frequency * 4;
+            const total = pricePerLesson * monthlyLessons;
+            
+            document.getElementById('total-price').innerText = total + " PLN";
+            document.getElementById('lesson-count').innerText = monthlyLessons + " lekcje w miesiącu";
+        }
+    </script>
 </body>
 </html>
