@@ -7,7 +7,7 @@
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: 'Nunito Sans', sans-serif; color: var(--dark); line-height: 1.6; overflow-x: hidden; }
+body { font-family: 'Nunito Sans', sans-serif; color: var(--dark); line-height: 1.6; overflow-x: hidden; scroll-behavior: smooth; }
 
 /* --- Hero --- */
 .hero { height: 100vh; display: flex; align-items: center; justify-content: center; position: relative; color: var(--white); text-align: center; padding: 0 20px; }
@@ -17,54 +17,50 @@ body { font-family: 'Nunito Sans', sans-serif; color: var(--dark); line-height: 
 h1 { font-size: clamp(2.5rem, 6vw, 4rem); margin: 20px 0; line-height: 1.1; }
 
 /* --- Defined Stats Bar --- */
-.stats-container { background: #fff; padding: 40px 20px; margin-top: -30px; position: relative; z-index: 10; }
-.stats-bar { 
-    max-width: 1100px; 
-    margin: 0 auto; 
-    display: grid; 
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
-    gap: 20px;
-}
-.stat-item { 
-    background: var(--bg-gray); 
-    padding: 30px; 
-    border-radius: 12px; 
-    text-align: center;
-    border-bottom: 4px solid var(--light-teal);
-}
+.stats-container { background: #fff; padding: 40px 20px; margin-top: -50px; position: relative; z-index: 10; }
+.stats-bar { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+.stat-item { background: var(--bg-gray); padding: 30px; border-radius: 12px; text-align: center; border-bottom: 4px solid var(--light-teal); }
 .stat-icon { font-size: 1.5rem; margin-bottom: 10px; }
-.stat-item h3 { font-size: 1.1rem; margin-bottom: 5px; }
-.stat-item p { font-size: 10px; letter-spacing: 1px; color: #666; font-weight: bold; }
 
-/* --- About & Tightened Arch --- */
-.about-section { padding: 60px 20px; background: #fff; display: flex; justify-content: center; }
-.arch-wrapper { position: relative; width: 100%; max-width: 700px; display: flex; flex-direction: column; align-items: center; }
+/* --- Tightened Arch Section --- */
+.about-section { padding: 40px 20px; background: #fff; display: flex; justify-content: center; }
+.arch-wrapper { position: relative; width: 100%; max-width: 650px; display: flex; flex-direction: column; align-items: center; }
 .teal-arch { position: absolute; top: 0; width: 100%; height: 100%; background-color: var(--light-teal); border-radius: 350px 350px 0 0; z-index: 1; }
-.student-img { width: 80%; max-width: 400px; border-radius: 20px; z-index: 2; margin-top: 40px; box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
-.arch-content { z-index: 3; text-align: center; margin-top: 30px; max-width: 500px; padding-bottom: 40px; }
+.student-img { width: 75%; max-width: 380px; border-radius: 20px; z-index: 2; margin-top: 30px; box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
+.arch-content { z-index: 3; text-align: center; margin-top: 25px; max-width: 500px; padding-bottom: 40px; }
 
 /* --- Bigger Features Header --- */
 .features { padding: 80px 10%; text-align: center; background: #fff; }
-.section-title { font-size: clamp(2.5rem, 5vw, 3.5rem); line-height: 1.2; margin-bottom: 60px; }
+.section-title { font-size: clamp(2.5rem, 5vw, 4rem); line-height: 1.2; margin-bottom: 60px; }
 .section-title span { font-style: italic; font-weight: 300; color: var(--teal); }
-
 .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
 .feature-card { padding: 50px 30px; background: var(--bg-gray); border-radius: 20px; text-align: left; }
 .highlight-card { background: var(--teal); color: white; }
+
+/* --- Pricing Calculator --- */
+.calc-section { padding: 100px 10%; background: var(--bg-gray); }
+.calc-container { max-width: 1000px; margin: 0 auto; background: white; padding: 60px; border-radius: 30px; box-shadow: 0 20px 60px rgba(0,0,0,0.05); }
+.calc-grid { display: grid; grid-template-columns: 1.5fr 1fr; gap: 50px; margin-top: 40px; }
+.radio-group { margin: 20px 0 40px; }
+.radio-option { display: block; padding: 15px; border: 2px solid #eee; border-radius: 10px; margin-bottom: 10px; cursor: pointer; }
+.radio-option input { margin-right: 10px; accent-color: var(--teal); }
+input[type="range"] { width: 100%; accent-color: var(--teal); margin: 20px 0 10px; }
+.range-labels { display: flex; justify-content: space-between; font-size: 12px; color: #999; }
+.result-box { background: #fdfdfd; border: 2px dashed var(--light-teal); padding: 40px; border-radius: 20px; text-align: center; }
+.result-box h3 { font-size: 3rem; color: var(--teal); margin: 10px 0; }
 
 /* --- Buttons --- */
 .btn { display: inline-block; padding: 16px 32px; text-decoration: none; font-weight: bold; border-radius: 6px; transition: 0.3s; margin: 10px; border: none; cursor: pointer; }
 .btn-teal { background: var(--teal); color: var(--white); }
 .btn-outline { border: 2px solid var(--white); color: var(--white); }
 .btn-white { background: var(--white); color: var(--teal); }
-.btn:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
 
 /* --- Footer --- */
 .main-footer { background: #2c3e50; color: white; padding: 80px 10% 40px; }
 .footer-grid { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 40px; }
 .footer-bottom { border-top: 1px solid #3e4f5f; margin-top: 50px; padding-top: 20px; text-align: center; font-size: 12px; opacity: 0.6; }
 
-@media (max-width: 768px) {
-    .section-title { font-size: 2.2rem; }
-    .footer-grid { flex-direction: column; text-align: center; }
+@media (max-width: 900px) {
+    .calc-grid { grid-template-columns: 1fr; }
+    .calc-container { padding: 30px; }
 }
