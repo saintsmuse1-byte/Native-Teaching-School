@@ -1,53 +1,60 @@
+/* --- Global Variables & Reset --- */
+:root {
+  --spacing-4xl: 64px;
+  --spacing-xl: 32px;
+  --color-surface: #ffffff;
+  --color-accent: #b3d9d9;
+  --font-main: 'Nunito Sans', sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-main);
+  color: #333;
+}
+
 /* --- Hero Statistics Elements --- */
-.home-thq-hero-stat-value-elm1 {
-  text-align: center; 
+/* We use Flexbox here so items stack neatly instead of overlapping */
+.hero-stats-row {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 40px;
 }
 
-.home-thq-hero-stat-label-elm1 {
-  font-size: 14px;
-  align-self: center;
-  text-align: center; 
+.hero-stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 200px;
 }
 
-.home-thq-hero-stat-value-elm2 {
-  transform: translateY(10px);
-  align-self: center;
-  text-align: center; 
-}
-
-.home-thq-hero-stat-label-elm2 {
-  font-size: 14px;
-  transform: translateY(35px);
-  align-self: center;
-  text-align: center; 
-}
-
-.home-thq-hero-stat-item-elm3 {
-  width: 200px; 
-}
-
+.home-thq-hero-stat-value-elm1, 
+.home-thq-hero-stat-value-elm2, 
 .home-thq-hero-stat-value-elm3 {
-  transform: translateY(32px);
-  align-self: center;
-  text-align: center; 
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 8px;
 }
 
+.home-thq-hero-stat-label-elm1, 
+.home-thq-hero-stat-label-elm2, 
 .home-thq-hero-stat-label-elm3 {
-  transform: translateY(35px);
-  align-self: center;
-  text-align: center; 
+  font-size: 14px;
+  line-height: 1.4;
+  color: #666;
 }
 
 /* --- About Section & Arched Background --- */
 .home-thq-about-section-elm {
   width: 100%;
-  height: 905px;
+  min-height: 800px;
   display: flex;
   padding: var(--spacing-4xl) var(--spacing-xl);
   overflow: hidden;
   position: relative;
-  transform: translateY(-50px);
-  min-height: 800px;
   align-items: center;
   flex-direction: column;
   background-color: var(--color-surface); 
@@ -56,18 +63,46 @@
 .home-thq-about-arch-background-elm {
   top: 10%;
   left: 50%;
-  width: 788px;
-  height: 723px;
+  width: 100%;
+  max-width: 800px;
+  height: 700px;
   z-index: 1;
   position: absolute;
-  max-width: 1000px;
   transform: translateX(-50%);
   border-radius: 500px 500px 0 0;
-  background-color: #b3d9d9; 
+  background-color: var(--color-accent); 
 }
 
+/* Positioning the button inside the arch */
 .home-thq-btn-elm3 {
-  transform: translateX(220px) translateY(590px); 
+  position: absolute;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+.home-thq-about-image-elm {
+  z-index: 2;
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 20px;
+  margin-top: 50px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.section-title {
+  z-index: 3;
+  font-size: 2.5rem;
+  margin: 20px 0;
+}
+
+.section-subtitle {
+  z-index: 3;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #555;
 }
 
 /* --- Visibility & Display Logic --- */
@@ -76,9 +111,27 @@
 }
 
 .home-container12, .home-container14 {
-  display: contents; 
+  display: block; 
 }
 
 .home-text14 {
   text-align: center;
+  font-weight: 600;
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 768px) {
+  .home-thq-about-arch-background-elm {
+    height: 500px;
+    border-radius: 250px 250px 0 0;
+  }
+  
+  .hero-stats-row {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+  }
 }
