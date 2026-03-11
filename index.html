@@ -8,9 +8,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;700&display=swap" rel="stylesheet">
     
     <style>
-        /* Navigation Styles */
+        /* Navbar Styling */
         .navbar {
-            height: 70px;
+            height: 75px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -52,32 +52,30 @@
         .nav-link {
             text-decoration: none;
             color: #4a4a4a;
-            font-size: 0.9rem;
-            font-weight: 400;
+            font-size: 0.95rem;
             transition: color 0.3s ease;
         }
 
         .nav-link:hover {
-            color: #008080; /* Matches your teal theme */
+            color: #008080; /* Branding teal */
         }
 
         .nav-btn {
             background: #008080;
             color: #fff !important;
-            padding: 8px 18px;
-            border-radius: 5px;
+            padding: 10px 20px;
+            border-radius: 6px;
             font-weight: 700;
-            transition: background 0.3s ease;
         }
 
-        .nav-btn:hover {
-            background: #006666;
+        /* Smooth Scroll behavior */
+        html {
+            scroll-behavior: smooth;
         }
 
         @media screen and (max-width: 768px) {
             .nav-item { margin-left: 15px; }
-            .nav-logo { font-size: 1.1rem; }
-            .nav-link { font-size: 0.8rem; }
+            .nav-logo { font-size: 1.2rem; }
         }
     </style>
 </head>
@@ -86,10 +84,9 @@
     <nav class="navbar">
         <div class="nav-container">
             <a href="index.html" class="nav-logo">Native Talk</a>
-            
             <ul class="nav-menu">
-                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-                <li class="nav-item"><a href="#calculator" class="nav-link">Cennik</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#calculator" class="nav-link">Price List</a></li>
                 <li class="nav-item"><a href="#contact" class="nav-link nav-btn">Contact Us</a></li>
             </ul>
         </div>
@@ -148,7 +145,7 @@
             <div class="feature-card">
                 <div class="icon">📅</div>
                 <h3>Elastyczne godziny</h3>
-                <p>Działamy na Twoich zasadach. Ty wybierasz czas, mu zajmiemy się resztę.</p>
+                <p>Działamy na Twoich zasadach. Ty wybierasz czas, my zajmiemy się resztę.</p>
             </div>
             <div class="feature-card">
                 <div class="icon">📄</div>
@@ -200,7 +197,7 @@
                             Akceptujemy <strong>BLIK</strong>, Karty i Przelewy
                         </div>
 
-                        <a href="checkout.html" id="checkout-link" class="btn btn-teal">MAKE PAYMENT & BOOK SESSION</a>
+                        <a href="#contact" class="btn btn-teal">INQUIRE & BOOK SESSION</a>
                     </div>
                 </div>
             </div>
@@ -210,16 +207,17 @@
     <footer id="contact" class="main-footer">
         <div class="footer-grid">
             <div class="footer-brand">
-                <h3>Native Talk</h3>
+                <h3>Czeca English</h3>
                 <p>Czuj się jak u siebie, gdziekolwiek jesteś.</p>
             </div>
             <div class="footer-contact">
                 <h4>Kontakt</h4>
-                <p>📧 hellonativetalk@gmail.com</p>
+                <p>📧 hello@czecaenglish.com</p>
+                <p>📍 Cape Town | Tbilisi</p>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 Native Talk. All rights reserved.</p>
+            <p>&copy; 2026 Czeca English. All rights reserved.</p>
         </div>
     </footer>
 
@@ -232,9 +230,6 @@
             
             document.getElementById('total-price').innerText = total + " PLN";
             document.getElementById('lesson-count').innerText = monthlyLessons + " lekcje w miesiącu";
-
-            const checkoutBtn = document.getElementById('checkout-link');
-            checkoutBtn.href = "checkout.html?amount=" + total;
         }
 
         window.onload = calculate;
